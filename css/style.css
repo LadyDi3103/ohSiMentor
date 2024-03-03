@@ -42,7 +42,7 @@ body {
      color: #666666;
      font-size: 14px;
      font-family: 'Poppins', sans-serif;
-     line-height: 1.80857;
+     /* line-height: 1.80857; */
      font-weight: normal;
 }
 
@@ -112,7 +112,7 @@ h4 a,
 h5 a,
 h6 a {
      color: #212121;
-     text-decoration: none!important;
+     text-decoration: none !important;
      opacity: 1
 }
 
@@ -153,11 +153,19 @@ a,
 }
 
 img {
-     max-width: 100%;
      height: auto;
+     max-width: 100%;
 }
 
- :focus {
+.img_cover{
+     margin-top: 6rem !important;
+}
+
+.img_team{
+     height: auto;
+     max-width: 100%;
+}
+:focus {
      outline: 0;
 }
 
@@ -210,8 +218,9 @@ button {
 .full {
      width: 100%;
      float: left;
-     margin: 0;
-     padding: 0;
+     margin: 0px;
+     padding: 0px;
+     margin-top: -45px
 }
 
 
@@ -306,9 +315,9 @@ button {
 
 .header {
      width: 100%;
-     padding: 30px 30px;
-     background: transparent;
-     position: absolute;
+     padding: 10px 30px;
+     background: #131629;
+     /* position: absolute; */
      z-index: 999;
      border-top: #090102 solid 11px;
 }
@@ -322,7 +331,7 @@ button {
 
 .banner_main {
      background: #f5f6f6;
-     padding: 198px 0px 90px 0px;
+     /* padding: 0px 0px 90px 0px; */
 }
 
 .text-bg {
@@ -331,9 +340,10 @@ button {
 
 .text-bg h1 {
      color: #070404;
-     font-size: 60px;
+     font-size: 40px;
      line-height: 76px;
-     padding-bottom: 45px;
+     padding-top: 10px;
+     /* padding-bottom: 81px; */
      font-weight: bold;
      text-transform: uppercase;
 }
@@ -408,13 +418,13 @@ button {
 }
 
 .read_more {
-     font-size: 17px;
+     font-size: 16px;
      background-color: transparent;
      border: #ffffff solid 2px;
      color: #1a1a1a;
-     padding: 15px 0px;
+     padding: 18px 10px;
      width: 100%;
-     max-width: 222px;
+     max-width: 250px;
      text-align: center;
      display: inline-block;
      transition: ease-in all 0.5s;
@@ -433,7 +443,7 @@ button {
 
 .about {
      border-bottom: #000 solid 1px;
-     padding: 130px 0 90px 0;
+     padding: 50px 0 90px 0;
 }
 
 .about .about_img {
@@ -487,20 +497,22 @@ button {
 
 .glasses {
      background: #fff;
-     margin-top: 90px;
+     margin-top: 40px;
 }
 
 .glasses .titlepage {
      text-align: center;
-     padding-bottom: 60px;
+     /* padding-bottom: 60px; */
 }
 
 .glasses .titlepage p {
      font-size: 17px;
      line-height: 30px;
      font-weight: 400;
-     padding-top: 10px;
+     padding-top: 15px;
+     padding-bottom: 15px;
 }
+
 
 .blu {
      color: #03cafc;
@@ -510,35 +522,40 @@ button {
 .glasses .glasses_box {
      text-align: center;
      border: #555556 solid 1px;
-     border-radius: 2px;
-     padding: 120px 0px 30px 0px;
+     border-radius: 8px;
+     padding: 20px 0px 20px 0px;
      margin-bottom: 30px;
+     background-color: #131629;
+
 }
 
 .glasses .glasses_box figure {
-     margin: 0;
+     background-color: #fffffe;
+     padding: 10px;
+     border-radius: 8px;
+     width: 280px;
+     margin: auto;
 }
 
 .glasses .glasses_box h3 {
      color: #100d0d;
      font-size: 22px;
      line-height: 20px;
-     padding: 70px 0px 9px 0px;
+     padding: 5px 0px 9px 0px;
 }
 
 .glasses .glasses_box p {
      color: #2a2a2c;
-     font-size: 18px;
-     line-height: 28px;
+     font-size: 15px;
+     /* line-height: 28px; */
      font-weight: 400;
 }
 
 .glasses .read_more {
-     border: #1a1a1a solid 2px;
-     font-weight: 500;
-     display: block;
-     margin: 0 auto;
-     margin-top: 44px;
+    border: 2px solid rgb(26, 26, 26);
+    font-weight: 500;
+    display: block;
+    margin: 30px auto;
 }
 
 
@@ -611,7 +628,7 @@ button {
 /** clients section **/
 
 .clients {
-     padding: 90px 0 70px 0;
+     padding: 0 0 70px 0;
 }
 
 .clients .titlepage {
@@ -836,4 +853,31 @@ ul.location_icon li a {
 .position_head .glasses,
 .shop {
      margin-bottom: 90px;
+}
+
+.img__logo {
+     max-width: 150px;
+     height: auto;
+}
+
+.center-desk {
+     height: 0px;
+}
+
+/* card */
+.container_img {
+     /* border: solid 1px; */
+     border-radius: 3px;
+
+}
+
+.description_card {
+     width: 250px;
+     height: auto;
+}
+.card-body{
+     background-color: #fffffe;
+     border-radius: 8px;
+     margin: auto;
+     width: 280px;
 }
