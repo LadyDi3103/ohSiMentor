@@ -165,6 +165,10 @@ img {
      height: auto;
      max-width: 100%;
 }
+.img_Comment{
+width:200px;
+height: auto;
+}
 :focus {
      outline: 0;
 }
@@ -526,7 +530,7 @@ button {
      padding: 20px 0px 20px 0px;
      margin-bottom: 30px;
      background-color: #131629;
-
+     height: 480px;
 }
 
 .glasses .glasses_box figure {
@@ -546,7 +550,7 @@ button {
 
 .glasses .glasses_box p {
      color: #2a2a2c;
-     font-size: 15px;
+     font-size: 13px;
      /* line-height: 28px; */
      font-weight: 400;
 }
@@ -585,7 +589,7 @@ button {
 
 .shop .max_width {
      text-align: left;
-     background: #030404;
+     background: #131629;
      height: 100%;
      padding-top: 86px;
      padding-left: 50px;
