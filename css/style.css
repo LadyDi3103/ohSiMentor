@@ -409,7 +409,7 @@ button {
 
 .titlepage h2 {
      font-size: 35px;
-     color: #2a2a2c;
+     color: #131629;
      line-height: 45px;
      font-weight: bold;
      padding: 0;
@@ -672,6 +672,7 @@ button {
      float: left;
      text-align: left;
      margin-left: 89px;
+     background-color: #fffffe;
 }
 
 .clients_box figure {
@@ -884,4 +885,7 @@ ul.location_icon li a {
      border-radius: 8px;
      margin: auto;
      width: 280px;
+}
+.row{
+     height: 80%S;
 }
