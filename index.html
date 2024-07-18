@@ -60,6 +60,7 @@
                         aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                      </button>
+
                      <div class="collapse navbar-collapse" id="navbarsExample04">
                         <ul class="navbar-nav mr-auto">
                            <li class="nav-item active">
@@ -77,12 +78,12 @@
                            <li class="nav-item">
                               <a class="nav-link" href="index.html">Contáctanos</a>
                            </li>
-                           <li class="nav-item d_none login_btn">
+                           <!-- <li class="nav-item d_none login_btn">
                               <a class="nav-link" href="#">Login</a>
                            </li>
                            <li class="nav-item d_none">
                               <a class="nav-link" href="#">Registrarse</a>
-                           </li>
+                           </li> -->
                            <li class="nav-item d_none sea_icon">
                               <a class="nav-link" href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i><i
                                     class="fa fa-search" aria-hidden="true"></i></a>
@@ -95,6 +96,7 @@
          </div>
       </div>
    </header>
+
    <!-- end header inner -->
    <!-- end header -->
    <!-- banner -->
@@ -110,17 +112,21 @@
          <div class="carousel-inner">
 
             <div class="carousel-item active">
-               <div class="container">
+               <div class="container section">
                   <div class="carousel-caption">
                      <div class="row">
                         <div class="col-md-6">
                            <div class="text-bg">
-                              <h1><span class="blu">SOMOS<br></span>Tu mentor de estudios basado en WhatsApp con inteligencia artificial.</h1>
-                              <a id="whatsapp-link" class="read_more" href="https://wa.me/+15550059140">Usalo gratis en WhatsApp</a>
+                              <h1><span class="blu">TRANSFORMA </span>Tu Estudio con OhsíMentor</h1>
+                              <h2>Respuestas <strong>instantáneas,</strong> materiales de estudio y mucho más, todo al
+                                 alcance de tu mano en <strong>WhatsApp.</strong></h2>
+                              <a id="whatsapp-link" class="read_more" href="https://wa.me/+15550059140">Usalo gratis en
+                                 WhatsApp</a>
                            </div>
                         </div>
                         <div class="col-md-6">
-                           <figure><img class="img_cover mt-4" src="images/OhSiMentorBLANCO.svg" style="object-fit: cover" alt="mockUp del cel" /></figure>
+                           <figure><img class="img_cover mt-4" src="images/OhSiMentorBLANCO.svg"
+                                 style="object-fit: cover" alt="mockUp del cel" /></figure>
                         </div>
                      </div>
                   </div>
@@ -128,47 +134,63 @@
             </div>
          </div>
 
-         <a class="carousel-control-prev" href="#banner1" role="button" data-slide="prev">
+         <!-- <a class="carousel-control-prev" href="#banner1" role="button" data-slide="prev">
             <i class="fa fa-arrow-left" aria-hidden="true"></i>
          </a>
          <a class="carousel-control-next" href="#banner1" role="button" data-slide="next">
             <i class="fa fa-arrow-right" aria-hidden="true"></i>
-         </a>
+         </a> -->
       </div>
    </section>
    <!-- end banner -->
 
    <!-- about section -->
-   <div class="about">
-      <div class="container">
-         <div class="row d_flex">
+   <div class="about section">
+      <div class="container ">
+         <div class="row d_flex ">
             <div class="col-md-5">
-               <div class="about_img">
-                  <video loop autoplay muted>
+               <div class="about_img text-center">
+                  <video id="aboutVideo" loop autoplay muted style="width: 45%; height: auto; max-width: 100%;">
                      <source src="video/demo.mp4" type="video/mp4">
                      Tu navegador no soporta el elemento de video.
-                   </video>
+                  </video>
                </div>
             </div>
             <div class="col-md-7">
                <div class="titlepage">
-                  <h2>Acerca de OhsiMentor</h2>
+                  <h2 class="text-start">Acerca de OhsiMentor</h2>
                   <p>OhsiMentor es un tutor de estudio que, gracias a la Inteligencia Artificial, te guiará en tu
                      trayectoria de aprendizaje utilizando tecnología de vanguardia.</p>
-                     <a class="read_more" href="#">Ver demo</a>
+                  <a id="viewDemoButton" class="read_more" target="_blank" href="#">Ver demo</a>
                </div>
-              
+
             </div>
          </div>
       </div>
    </div>
+   <script>
+      function openVideoInNewWindow() {
+         var videoSrc = document.getElementById('aboutVideo').querySelector('source').src;
+         window.open(videoSrc, '_blank');
+      }
 
+      document.getElementById('aboutVideo').addEventListener('click', openVideoInNewWindow);
+      document.getElementById('viewDemoButton').addEventListener('click', function (event) {
+         event.preventDefault();
+         openVideoInNewWindow();
+      });
+   </script>
+   <style>
+      .about_img video:hover {
+         transform: scale(1.1);
+      }
+   </style>
 
 
    <!-- about section -->
    <!-- Our  Glasses section -->
-   <div class="glasses">
-      <div class="container">
+   <div class="glasses section">
+      <div class="container ">
          <div class="row">
             <div class="col-md-10 offset-md-1">
                <div class="titlepage">
@@ -187,10 +209,12 @@
                   <div class="container_img">
                      <figure><img class="description_card" src="images/bienvenida.jpeg" alt="Imagen" /></figure>
                   </div>
-                  <div class="card-body mt-2">
+                  <div class="card-body">
                      <h3><span class="blu">Consultas generales</span></h3>
-                     <p>Explora nuestra guía educativa personalizada con IA avanzada, diseñada para adaptarse a las necesidades únicas de cada estudiante. Únete a la revolución de la educación personalizada.</p>
-                     <a id="whatsapp-link" class="read_more" href="https://wa.me/+15550059140">Prúebalo en WhatsApp</a>
+                     <p>Nuestra guía educativa personalizable con IA, está diseñada para adaptarse a las
+                        necesidades únicas de cada estudiante.</p>
+                     <a id="whatsapp-link" class="read_more" target="_blank" href="https://wa.me/+15550059140">Prúebalo
+                        en WhatsApp</a>
                   </div>
                </div>
             </div>
@@ -200,42 +224,45 @@
                   <div class="container_img">
                      <figure><img class="description_card" src="images/textPdf.jpeg" alt="Imagen" /></figure>
                   </div>
-                  <div class="card-body mt-2">
+                  <div class="card-body">
                      <h3><span class="blu">Sube PDF's</span></h3>
-                     <p>PDF de hasta 1GB a través de WhatsApp fácilmente con nuestra función 'Subir documentos'. Comienza tu viaje educativo ahora.</p>
-                     <a id="whatsapp-link" class="read_more" href="https://wa.me/+15550059140">Prúebalo en WhatsApp</a>
+                     <p>PDF de hasta 1GB a través de WhatsApp fácilmente con nuestra función 'Subir documentos'.</p>
+                     <a id="whatsapp-link" class="read_more" target="_blank" href="https://wa.me/+15550059140">Prúebalo
+                        en WhatsApp</a>
                   </div>
                </div>
             </div>
-
-
 
             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                <div class="glasses_box">
                   <div class="container_img">
                      <figure><img class="description_card" src="images/formato.jpeg" alt="Imagen" /></figure>
                   </div>
-                  <div class="card-body mt-2">
+                  <div class="card-body">
                      <h3><span class="blu">Optimiza tu estudio</span></h3>
-                     <p>Sube tu PDF y elige entre PDF (resumen) o audio (resumen) como material de estudio. Tu aprendizaje, a tu medida.</p>
-                     <a id="whatsapp-link" class="read_more" href="https://wa.me/+15550059140">Prúebalo en WhatsApp</a>
+                     <p>Elige entre PDF (resumen) o audio (resumen) como material de estudio. Tu
+                        aprendizaje, a tu medida.</p>
+                     <a id="whatsapp-link" class="read_more" target="_blank" href="https://wa.me/+15550059140">Prúebalo
+                        en WhatsApp</a>
                   </div>
                </div>
             </div>
+
             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
                <div class="glasses_box">
                   <div class="container_img">
                      <figure><img class="description_card" src="images/audio.jpeg" alt="Imagen" /></figure>
                   </div>
-                  <div class="card-body mt-2">
+                  <div class="card-body">
                      <h3><span class="blu">Empodérate con OhsiMentor</span></h3>
-                     <p>Elige entre PDF (resumen) o audio (resumen), aprende a tu estilo y mantén el flujo con la opción de cargar más PDF's.</p>
-                     <a id="whatsapp-link" class="read_more" href="https://wa.me/+15550059140">Prúebalo en WhatsApp</a>
+                     <p>Elige entre PDF (resumen) o audio (resumen), aprende a tu manera.</p>
+                     <a id="whatsapp-link" class="read_more" target="_blank" href="https://wa.me/+15550059140">Prúebalo
+                        en WhatsApp</a>
                   </div>
                </div>
             </div>
 
-            
+
             <!-- <div class="col-md-12">
                <a class="read_more" href="#">Leer más</a>
             </div> -->
@@ -247,20 +274,24 @@
    </div>
    <!-- end Our  Glasses section -->
    <!-- Our shop section -->
-   <div id="about" class="shop">
+   <div id="about" class="shop section">
       <div class="container-fluid">
          <div class="row">
             <div class="col-md-6">
                <div class="shop_img">
-                  <figure><img src="images/OSMfinal.svg" style="object-fit: cover;" alt="#" /></figure>
+                  <figure><img src="images/OSMfinal.svg" class="mockup-image" alt="OhsiMentor Mockup" /></figure>
                </div>
             </div>
             <div class="col-md-6 padding_right0">
                <div class="max_width">
                   <div class="titlepage">
                      <h2>Tu mejor solución es OhsiMentor</h2>
-                     <p>OhsiMentor es una plataforma educativa innovadora diseñada para potenciar el aprendizaje personalizado y efectivo. Con un enfoque centrado en el estudiante, OhsiMentor utiliza tecnología de vanguardia, incluyendo inteligencia artificial y análisis de datos, para ofrecer una experiencia de aprendizaje adaptativa y de alta calidad.</p>
-                     <a id="whatsapp-link" class="read_more" href="https://wa.me/+15550059140">Úsalo ahora</a>
+                     <p>OhsiMentor es una plataforma educativa innovadora diseñada para potenciar el aprendizaje
+                        personalizado y efectivo. Con un enfoque centrado en el estudiante, OhsiMentor utiliza
+                        tecnología de vanguardia, incluyendo inteligencia artificial y análisis de datos, para ofrecer
+                        una experiencia de aprendizaje adaptativa y de alta calidad.</p>
+                     <a id="whatsapp-link" class="read_more" target="_blank" href="https://wa.me/+15550059140">Úsalo
+                        ahora</a>
                   </div>
                </div>
             </div>
@@ -268,38 +299,34 @@
       </div>
    </div>
    <!-- end Our shop section -->
-   <!-- clients section -->
-   <div class="clients">
+   <!-- Clients Section -->
+   <div class="clients section">
       <div class="container">
          <div class="row">
             <div class="col-md-12">
                <div class="titlepage">
                   <h2>Lo que dicen nuestros usuarios</h2>
-                  <p>Nuestros usuarios adoran OhsiMentor por su enfoque innovador en el aprendizaje, su interfaz intuitiva y sus características personalizadas que facilitan el progreso académico.</p>
+                  <p>Nuestros usuarios adoran OhsiMentor por su enfoque innovador en el aprendizaje, su interfaz
+                     intuitiva y sus características personalizadas que facilitan el progreso académico.</p>
                </div>
             </div>
          </div>
 
-
          <div class="row">
             <div class="col-md-12">
-               <div id="myCarousel" class="carousel slide clients_Carousel " data-ride="carousel">
-                  <ol class="carousel-indicators">
-                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                     <li data-target="#myCarousel" data-slide-to="1"></li>
-                     <li data-target="#myCarousel" data-slide-to="2"></li>
-                  </ol>
+               <div id="myCarousel" class="carousel slide clients_Carousel" data-ride="carousel">
                   <div class="carousel-inner">
-
                      <div class="carousel-item active">
-                        <div class="container">
-                           <div class="carousel-caption ">
+                        <div class="container section">
+                           <div class="carousel-caption">
                               <div class="row">
                                  <div class="col-md-12">
                                     <div class="clients_box">
                                        <figure><img class="img_Comment" src="images/Fernanda.jpeg" alt="#" /></figure>
                                        <h3>Fernanda Vidal</h3>
-                                       <p>"¡Increíble experiencia con OhsiMentor! Me encanta cómo la plataforma se adapta a mi ritmo de aprendizaje y me proporciona recursos personalizados para mejorar mis habilidades."</p>
+                                       <p>"¡Increíble experiencia con OhsiMentor! Me encanta cómo la plataforma se
+                                          adapta a mi ritmo de aprendizaje y me proporciona recursos personalizados para
+                                          mejorar mis habilidades."</p>
                                     </div>
                                  </div>
                               </div>
@@ -308,20 +335,24 @@
                      </div>
 
                      <div class="carousel-item">
-                        <div class="container">
+                        <div class="container section">
                            <div class="carousel-caption">
                               <div class="row">
                                  <div class="col-md-12">
                                     <div class="clients_box">
                                        <figure><img class="img_Comment" src="images/Yahaira.jpeg" alt="#" /></figure>
                                        <h3>Indira Davoin</h3>
-                                       <p>"OhsiMentor ha sido una verdadera revelación para mí. Desde que empecé a usarlo, he notado un aumento significativo en mi comprensión de los conceptos difíciles. ¡Definitivamente recomendaría esta plataforma a cualquiera que busque mejorar su rendimiento académico!"</p>
+                                       <p>"OhsiMentor ha sido una verdadera revelación para mí. Desde que empecé a
+                                          usarlo, he notado un aumento significativo en mi comprensión de los conceptos
+                                          difíciles. ¡Definitivamente recomendaría esta plataforma a cualquiera que
+                                          busque mejorar su rendimiento académico!"</p>
                                     </div>
                                  </div>
                               </div>
                            </div>
                         </div>
                      </div>
+
                      <div class="carousel-item">
                         <div class="container">
                            <div class="carousel-caption">
@@ -330,7 +361,10 @@
                                     <div class="clients_box">
                                        <figure><img class="img_Comment" src="images/david.jpeg" alt="#" /></figure>
                                        <h3>Enawel Pérez</h3>
-                                       <p>"Estoy impresionado por la eficacia de OhsiMentor. No solo me ha ayudado a mantenerme organizado con mis estudios, sino que también ha mejorado mi confianza en las áreas en las que antes me sentía inseguro. ¡Gracias por esta increíble herramienta de aprendizaje!"</p>
+                                       <p>"Estoy impresionado por la eficacia de OhsiMentor. No solo me ha ayudado a
+                                          mantenerme organizado con mis estudios, sino que también ha mejorado mi
+                                          confianza en las áreas en las que antes me sentía inseguro. ¡Gracias por esta
+                                          increíble herramienta de aprendizaje!"</p>
                                     </div>
                                  </div>
                               </div>
@@ -338,6 +372,13 @@
                         </div>
                      </div>
                   </div>
+
+                  <ol class="carousel-indicators">
+                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                     <li data-target="#myCarousel" data-slide-to="1"></li>
+                     <li data-target="#myCarousel" data-slide-to="2"></li>
+                  </ol>
+
                   <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
                      <i class='fa fa-angle-left'></i>
                   </a>
@@ -347,33 +388,141 @@
                </div>
             </div>
          </div>
-
-
       </div>
-
    </div>
 
-   <div class="row">
+   <style>
+      .clients .carousel-indicators {
+         bottom: 285px;
+      }
+
+      .clients .carousel-indicators li {
+         background-color: #333;
+      }
+
+      .clients .carousel-indicators .active {
+         background-color: #555;
+      }
+
+      .clients_box {
+         text-align: center;
+         background: #f8f8f8;
+         padding: 20px;
+         border-radius: 10px;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .clients_box figure {
+         margin-bottom: 15px;
+      }
+
+      .clients_box h3 {
+         font-size: 1.5rem;
+         margin-bottom: 10px;
+      }
+
+      .clients_box p {
+         font-size: 1rem;
+         color: #666;
+      }
+
+
+      .carousel-caption {
+         position: static;
+         padding: 0;
+      }
+   </style>
+
+   <div class="row section">
       <div class="col-md-12">
          <div class="titlepage">
-            <h2 class="mt-3 mb-3 text-center">Nuestro equipo</h2>
-            <figure><img class="img_team" src="images/OhSiMentorTeam.svg" alt="#" /></figure>
+            <h2 class="mb-3 text-center">Nuestro equipo</h2>
+            <!-- <figure><img class="img_team" src="images/OhSiMentorTeam.svg" alt="#" /></figure> -->
+            <div class="container team-section">
+               <div class="text-center mb-5">
+                  <h2>Team OhSiHackers</h2>
+               </div>
+               <div class="row">
+                  <div class="col-md-3 team-member">
+                     <img src="images/dianaa.jpg" alt="Diana Quispe">
+                     <h4 class="mt-3">Product Designer</h4>
+                     <h3>DIANA QUISPE</h3>
+                     <p>Front-end developer</p>
+                     <p>(ex-Laboratoria con más de 2 años)</p>
+                  </div>
+                  <div class="col-md-3 team-member">
+                     <img src="images/axel.jpg" alt="Áxel Chacón">
+                     <h4 class="mt-3">COO</h4>
+                     <h3>ÁXEL CHACÓN</h3>
+                     <p>Ing. Civil - PUCP</p>
+                     <p>Programación No Code<br>5 años en Gestión de proyectos</p>
+                  </div>
+                  <div class="col-md-3 team-member">
+                     <img src="images/giovanny.jpg" alt="Giovanni Temoche">
+                     <h4 class="mt-3">CTO</h4>
+                     <h3>GIOVANNI TEMOCHE</h3>
+                     <p>Ing. Informático y Psicología<br>CIBERTEC - UNFV</p>
+                     <p>Más de 5 años en PROGRAMACIÓN</p>
+                  </div>
+                  <div class="col-md-3 team-member">
+                     <img src="images/kevin.jpg" alt="Kevin Urpay">
+                     <h4 class="mt-3">Product Designer</h4>
+                     <h3>KEVIN URPAY</h3>
+                     <p>Diseño Industrial - PUCP</p>
+                     <p>SEDIPRO PUCP<br>Más de 5 años en UX/UI</p>
+                  </div>
+               </div>
+            </div>
          </div>
       </div>
    </div>
 
-   <div class="row">
+   <div class="row section">
       <div class="col-md-12">
          <div class="titlepage">
             <h2 class="mt-3 mb-3 text-center">Premium</h2>
-            <figure><img class="img_team" src="images/OhSiMentorMne.svg" alt="#" /></figure>
+            <!-- <figure><img class="img_team" src="images/OhSiMentorMne.svg" alt="#" /></figure> -->
+            <div class="container-fluid business-model-section">
+               <h2>Modelo de Negocio</h2>
+               <div class="row">
+                  <div class="col-md-3">
+                     <div class="plan-card">
+                        <div class="plan-header">Free</div>
+                        <img src="images/free-icon.png" alt="Free Plan" class="business-model-image">
+                        <div class="plan-price">2mb</div>
+                        <div>Free</div>
+                     </div>
+                  </div>
+                  <div class="col-md-3">
+                     <div class="plan-card">
+                        <div class="plan-header">Basic</div>
+                        <img src="images/basic-icon.png" alt="Basic Plan" class="business-model-image">
+                        <div class="plan-price">5mb</div>
+                        <div>$5/mes</div>
+                     </div>
+                  </div>
+                  <div class="col-md-3">
+                     <div class="plan-card">
+                        <div class="plan-header">Premium</div>
+                        <img src="images/premium-icon.png" alt="Premium Plan" class="business-model-image">
+                        <div class="plan-price">10mb</div>
+                        <div>$10/mes</div>
+                     </div>
+                  </div>
+                  <div class="col-md-3 b2b-section">
+                     <img src="images/university-icon.png" alt="University" class="business-model-image">
+                     <img src="images/bank-icon.png" alt="Bank" class="business-model-image">
+                     <h3>B2B</h3>
+                  </div>
+               </div>
+            </div>
          </div>
       </div>
    </div>
    <!-- end clients section -->
    <!-- contact section -->
-   <div id="contact" class="contact">
-      <div class="container">
+   <div id="contact" class="contact section">
+      <div class="container ">
          <div class="row">
             <div class="col-md-6">
                <form id="request" class="main_form">
@@ -450,12 +599,18 @@
       function initMap() {
          var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 11,
-            center: { lat: 40.645037, lng: -73.880224 },
+            center: {
+               lat: 40.645037,
+               lng: -73.880224
+            },
          });
 
          var image = 'images/maps-and-flags.png';
          var beachMarker = new google.maps.Marker({
-            position: { lat: 40.645037, lng: -73.880224 },
+            position: {
+               lat: 40.645037,
+               lng: -73.880224
+            },
             map: map,
             icon: image
          });
@@ -474,8 +629,8 @@
       });
    </script>
    <!-- google map js -->
-   <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap">
+   </script>
    <!-- end google map js -->
 </body>
 
