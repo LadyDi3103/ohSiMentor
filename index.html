@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
    <!-- basic -->
-   <meta charset="utf-8">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <!-- mobile metas -->
    <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -112,16 +113,22 @@
          <div class="carousel-inner">
 
             <div class="carousel-item active">
-               <div class="container section">
+               <div class="container">
                   <div class="carousel-caption">
                      <div class="row">
                         <div class="col-md-6">
                            <div class="text-bg">
-                              <h1><span class="blu">TRANSFORMA </span>Tu Estudio con OhsíMentor</h1>
+                              <h1><span class="dark_blue">TRANSFORMA </span>Tu Estudio con OhsíMentor</h1>
                               <h2>Respuestas <strong>instantáneas,</strong> materiales de estudio y mucho más, todo al
                                  alcance de tu mano en <strong>WhatsApp.</strong></h2>
-                              <a id="whatsapp-link" class="read_more" href="https://wa.me/+15550059140">Usalo gratis en
-                                 WhatsApp</a>
+                                 <a id="whatsapp-link" href="https://wa.me/+15550059140" target="_blank" class="read_more">Usalo gratis en <strong>WhatsApp</strong></a>
+
+                                 <!-- <script>
+                                    document.getElementById("whatsapp-link").addEventListener("click", function(event) {
+                                        event.preventDefault();
+                                        window.open(this.href, '_blank');
+                                    });
+                                </script> -->
                            </div>
                         </div>
                         <div class="col-md-6">
@@ -150,7 +157,7 @@
          <div class="row d_flex ">
             <div class="col-md-5">
                <div class="about_img text-center">
-                  <video id="aboutVideo" loop autoplay muted style="width: 45%; height: auto; max-width: 100%;">
+                  <video id="aboutVideo" loop autoplay muted style="width: 50%; height: auto; max-width: 100%;">
                      <source src="video/demo.mp4" type="video/mp4">
                      Tu navegador no soporta el elemento de video.
                   </video>
@@ -168,6 +175,7 @@
          </div>
       </div>
    </div>
+
    <script>
       function openVideoInNewWindow() {
          var videoSrc = document.getElementById('aboutVideo').querySelector('source').src;
@@ -210,7 +218,7 @@
                      <figure><img class="description_card" src="images/bienvenida.jpeg" alt="Imagen" /></figure>
                   </div>
                   <div class="card-body">
-                     <h3><span class="blu">Consultas generales</span></h3>
+                     <h3><span class="dark_blue">Consultas generales</span></h3>
                      <p>Nuestra guía educativa personalizable con IA, está diseñada para adaptarse a las
                         necesidades únicas de cada estudiante.</p>
                      <a id="whatsapp-link" class="read_more" target="_blank" href="https://wa.me/+15550059140">Prúebalo
@@ -225,7 +233,7 @@
                      <figure><img class="description_card" src="images/textPdf.jpeg" alt="Imagen" /></figure>
                   </div>
                   <div class="card-body">
-                     <h3><span class="blu">Sube PDF's</span></h3>
+                     <h3><span class="dark_blue">Sube PDF's</span></h3>
                      <p>PDF de hasta 1GB a través de WhatsApp fácilmente con nuestra función 'Subir documentos'.</p>
                      <a id="whatsapp-link" class="read_more" target="_blank" href="https://wa.me/+15550059140">Prúebalo
                         en WhatsApp</a>
@@ -239,7 +247,7 @@
                      <figure><img class="description_card" src="images/formato.jpeg" alt="Imagen" /></figure>
                   </div>
                   <div class="card-body">
-                     <h3><span class="blu">Optimiza tu estudio</span></h3>
+                     <h3><span class="dark_blue">Optimiza tu estudio</span></h3>
                      <p>Elige entre PDF (resumen) o audio (resumen) como material de estudio. Tu
                         aprendizaje, a tu medida.</p>
                      <a id="whatsapp-link" class="read_more" target="_blank" href="https://wa.me/+15550059140">Prúebalo
@@ -254,7 +262,7 @@
                      <figure><img class="description_card" src="images/audio.jpeg" alt="Imagen" /></figure>
                   </div>
                   <div class="card-body">
-                     <h3><span class="blu">Empodérate con OhsiMentor</span></h3>
+                     <h3><span class="dark_blue">Empodérate con OhsiMentor</span></h3>
                      <p>Elige entre PDF (resumen) o audio (resumen), aprende a tu manera.</p>
                      <a id="whatsapp-link" class="read_more" target="_blank" href="https://wa.me/+15550059140">Prúebalo
                         en WhatsApp</a>
@@ -404,13 +412,7 @@
          background-color: #555;
       }
 
-      .clients_box {
-         text-align: center;
-         background: #f8f8f8;
-         padding: 20px;
-         border-radius: 10px;
-         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
+
 
       .clients_box figure {
          margin-bottom: 15px;
@@ -436,7 +438,7 @@
    <div class="row section">
       <div class="col-md-12">
          <div class="titlepage">
-            <h2 class="mb-3 text-center">Nuestro equipo</h2>
+            <h2 class="mb-3 mt-3 text-center">Nuestro equipo</h2>
             <!-- <figure><img class="img_team" src="images/OhSiMentorTeam.svg" alt="#" /></figure> -->
             <div class="container team-section">
                <div class="text-center mb-5">
@@ -447,29 +449,30 @@
                      <img src="images/dianaa.jpg" alt="Diana Quispe">
                      <h4 class="mt-3">Product Designer</h4>
                      <h3>DIANA QUISPE</h3>
-                     <p>Front-end developer</p>
-                     <p>(ex-Laboratoria con más de 2 años)</p>
+                     <p>Frontend Developer</p>
+                     <p><strong>&lt;LABORATORIA&gt;</strong></p>
+                     <p>+2AÑOS experiencia</p>
                   </div>
                   <div class="col-md-3 team-member">
                      <img src="images/axel.jpg" alt="Áxel Chacón">
                      <h4 class="mt-3">COO</h4>
                      <h3>ÁXEL CHACÓN</h3>
-                     <p>Ing. Civil - PUCP</p>
-                     <p>Programación No Code<br>5 años en Gestión de proyectos</p>
+                     <p><strong>Ing. Civil - PUCP</strong> </p>
+                     <p>Programación No Code<br>+5AÑOS en Gestión de proyectos</p>
                   </div>
                   <div class="col-md-3 team-member">
                      <img src="images/giovanny.jpg" alt="Giovanni Temoche">
                      <h4 class="mt-3">CTO</h4>
                      <h3>GIOVANNI TEMOCHE</h3>
-                     <p>Ing. Informático y Psicología<br>CIBERTEC - UNFV</p>
-                     <p>Más de 5 años en PROGRAMACIÓN</p>
+                     <p>Ing. Informático y Psicología<br> <strong>CIBERTEC - UNFV</strong></p>
+                     <p>+5AÑOS en PROGRAMACIÓN</p>
                   </div>
                   <div class="col-md-3 team-member">
                      <img src="images/kevin.jpg" alt="Kevin Urpay">
                      <h4 class="mt-3">Product Designer</h4>
                      <h3>KEVIN URPAY</h3>
                      <p>Diseño Industrial - PUCP</p>
-                     <p>SEDIPRO PUCP<br>Más de 5 años en UX/UI</p>
+                     <p><strong>SEDIPRO PUCP</strong><br>+5AÑOS en UX/UI</p>
                   </div>
                </div>
             </div>
@@ -477,44 +480,58 @@
       </div>
    </div>
 
-   <div class="row section">
-      <div class="col-md-12">
+   <div class="row section ">
+      <div class="col-md-12 mt-3 mb-3">
          <div class="titlepage">
-            <h2 class="mt-3 mb-3 text-center">Premium</h2>
+            <h2 class="mt-5 mb-3 text-center">Premium</h2>
             <!-- <figure><img class="img_team" src="images/OhSiMentorMne.svg" alt="#" /></figure> -->
             <div class="container-fluid business-model-section">
-               <h2>Modelo de Negocio</h2>
-               <div class="row">
+               <h2>Nuestro Modelo de Negocio</h2>
+
+               <div class="row contenedora">
                   <div class="col-md-3">
-                     <div class="plan-card">
-                        <div class="plan-header">Free</div>
-                        <img src="images/free-icon.png" alt="Free Plan" class="business-model-image">
-                        <div class="plan-price">2mb</div>
-                        <div>Free</div>
-                     </div>
+                     <div class="business-model-card">
+                        <div class="business-model-header">FREEMIUM (GRATUITO)</div>
+                        <p class="business-model-header-p">Funciones limitadas para el estudiante escolar o de educación superior:</p>
+                        <ul class="business-model-list">
+                            <li>Chat personalizado</li>
+                            <li>Almacenamiento de archivos subidos</li>
+                            <li>Ejercicios y entrega de material personalizado</li>
+                        </ul>
+                        <button class="contact-button">Contacta con el equipo comercial</button>
+                    </div>
                   </div>
                   <div class="col-md-3">
-                     <div class="plan-card">
-                        <div class="plan-header">Basic</div>
-                        <img src="images/basic-icon.png" alt="Basic Plan" class="business-model-image">
-                        <div class="plan-price">5mb</div>
-                        <div>$5/mes</div>
-                     </div>
+                     <div class="business-model-card">
+                        <div class="business-model-header">B2B</div>
+                        <p class="business-model-header-p">Alianzas con instituciones financieras:</p>
+                        <ul class="business-model-list">
+                            <li>Fomentar educación financiera y traer potenciales clientes</li>
+                            <li>Crear asistentes personales para cada institución</li>
+                            <li>Brindar material de estas instituciones</li>
+                        </ul>
+                        <button class="contact-button">Contacta con el equipo comercial</button>
+                    </div>
                   </div>
                   <div class="col-md-3">
-                     <div class="plan-card">
-                        <div class="plan-header">Premium</div>
-                        <img src="images/premium-icon.png" alt="Premium Plan" class="business-model-image">
-                        <div class="plan-price">10mb</div>
-                        <div>$10/mes</div>
-                     </div>
+                     <div class="business-model-card">
+                        <div class="business-model-header">B2C</div>
+                        <p class="business-model-header-p">Suscripción de pago con funciones más complejas y completas:</p>
+                        <ul class="business-model-list">
+                            <li>Funciones adicionales al plan freemium</li>
+                            <li>Capacidad de almacenamiento aumentada</li>
+                            <li>Acceso a servicios exclusivos</li>
+                        </ul>
+                        <button class="contact-button">Contacta con el equipo comercial</button>
+                    </div>
                   </div>
                   <div class="col-md-3 b2b-section">
-                     <img src="images/university-icon.png" alt="University" class="business-model-image">
-                     <img src="images/bank-icon.png" alt="Bank" class="business-model-image">
-                     <h3>B2B</h3>
+                     <img src="images/rentabilidad.png" alt="Bank" class="business-model-image">
+                     <img src="images/economic-growth_13384578.png" alt="University" class="business-model-image">
+                     <h3><strong>B2B</strong></h3>
                   </div>
                </div>
+
             </div>
          </div>
       </div>

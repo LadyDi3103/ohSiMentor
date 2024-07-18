@@ -5752,7 +5752,7 @@ button.close {
   position: relative;
   width: 100%;
   overflow: hidden;
-  height: calc(100vh - 85px)!important;
+  /* height: calc(100vh - 85px)!important; */
 }
 
 .carousel-item {
